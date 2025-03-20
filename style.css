@@ -1,0 +1,282 @@
+/* Resetando os estilos padrão de margin, padding e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que a largura e altura de um elemento incluam seu padding e border */
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    background-color: #3e1c33; /* Cor de fundo do body - .color2 */
+    color: #fff; /* Cor do texto - branco */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    padding-top: 20px; /* Espaçamento superior */
+    padding-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Container principal que vai centralizar todo o conteúdo */
+.container {
+    width: 90%; /* Largura do container (90% da largura da tela) */
+    max-width: 1200px; /* Largura máxima de 1200px */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    text-align: center; /* Alinha o texto ao centro dentro do container */
+    padding: 20px; /* Adiciona espaço interno ao container */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #130912; /* Cor de fundo do cabeçalho - .color3 */
+    color: #fff; /* Cor do texto - branco */
+    padding: 40px 20px; /* Espaçamento interno do cabeçalho */
+    text-align: center; /* Alinha o texto ao centro */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 30px; /* Espaço inferior entre o cabeçalho e a próxima seção */
+}
+
+/* Tamanho do título dentro do cabeçalho */
+header h1 {
+    font-size: 3em; /* Tamanho da fonte do título */
+    margin-bottom: 15px; /* Espaçamento inferior do título */
+}
+
+/* Tamanho do texto dentro do cabeçalho */
+header p {
+    font-size: 1.5em; /* Tamanho da fonte do parágrafo */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilo das seções principais */
+section {
+    padding: 30px; /* Espaçamento interno das seções */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra ao redor da seção */
+    margin-bottom: 30px; /* Espaço inferior entre as seções */
+    background-color: #130912; /* Cor de fundo das seções - .color1 */
+    display: flex; /* Utiliza flexbox para o layout */
+    flex-direction: column; /* Organiza os itens de forma vertical */
+    align-items: center; /* Alinha os itens no centro */
+    justify-content: center; /* Centraliza o conteúdo da seção */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Tamanho e espaçamento do título de cada seção */
+h2 {
+    font-size: 2.5em; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaço inferior do título */
+    color: #fff; /* Cor do texto do título - branco */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Tamanho e estilo dos parágrafos dentro das seções */
+p {
+    font-size: 1.2em; /* Tamanho da fonte do parágrafo */
+    margin-bottom: 20px; /* Espaço inferior do parágrafo */
+    text-align: justify; /* Justifica o texto */
+    color: #fff; /* Cor do texto - branco */
+}
+
+/* Estilo das listas não ordenadas */
+ul {
+    list-style-type: none; /* Remove os marcadores das listas */
+    padding: 0; /* Remove o padding padrão */
+    display: flex; /* Flexbox para alinhar os itens */
+    flex-wrap: wrap; /* Faz os itens quebrarem para a linha seguinte quando não cabem */
+    justify-content: center; /* Alinha os itens no centro */
+    color: #fff; /* Cor dos itens da lista - branco */
+}
+
+/* Estilo da lista de certificados */
+.certificates-list {
+    display: flex;
+    flex-wrap: wrap; /* Para que os itens possam quebrar para a próxima linha se necessário */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.certificate-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #371228;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 280px; /* Definindo largura fixa para os itens */
+    text-align: left;
+    transition: transform 0.3s ease; /* Adicionando uma animação para o hover */
+    color: white; /* Garantindo que todo o texto da certificate-item seja branco */
+}
+
+/* Certifique-se de que as tags dentro da certificate-item também tenham a cor branca */
+.certificate-item strong,
+.certificate-item p {
+    color: white !important; /* Usando !important para garantir que a cor branca prevaleça */
+}
+
+/* Para garantir que o texto no .certificate-info também seja branco */
+.certificate-info {
+    color: white !important;
+}
+
+
+.certificate-item:hover {
+    transform: translateY(-10px); /* Leve elevação no hover */
+}
+
+.cert-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.certificate-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.certificate-info strong {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333; /* Cor do título do certificado */
+}
+
+.certificate-info p {
+    font-size: 1.1em;
+    color: #555; /* Cor da descrição do certificado */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0c070c; /* Cor de fundo do rodapé - .color2 */
+    color: white; /* Cor do texto no rodapé - branco */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer p {
+    font-size: 1.3em;
+}
+
+/* Estilos para o carrossel */
+/* Estilo para a seção do carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 100%; /* Largura máxima do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Esconde os itens fora da área visível */
+}
+
+.carousel {
+    display: flex; /* Utiliza flexbox para o carrossel */
+    transition: transform 0.5s ease; /* Transição suave ao mover os itens */
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Cada item ocupa 100% da largura do carrossel */
+    box-sizing: border-box; /* Inclui o padding e borda no cálculo de largura */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    display: flex; /* Define flexbox dentro do item do carrossel */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100%; /* Garante que o item ocupe a altura total disponível */
+}
+
+.carousel-item img {
+    width: 60px; /* Largura das imagens dentro do carrossel */
+    height: 60px; /* Altura das imagens dentro do carrossel */
+    border-radius: 50%; /* Faz as imagens ficarem circulares */
+    margin-bottom: 15px; /* Espaço inferior entre a imagem e o texto */
+}
+
+.carousel-item strong {
+    font-size: 1.5em; /* Tamanho do texto em negrito */
+    display: block; /* Faz o texto ficar em bloco */
+    margin-bottom: 10px; /* Espaço inferior do texto */
+}
+
+.carousel-item p {
+    font-size: 1.2em; /* Tamanho do texto */
+    color: #fff; /* Cor do texto - branco */
+}
+
+/* Estilo dos botões do carrossel */
+button {
+    position: absolute;
+    top: 50%; /* Coloca os botões no meio da altura */
+    transform: translateY(-50%); /* Centraliza verticalmente os botões */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões - branco */
+    border: none; /* Remove a borda do botão */
+    padding: 15px; /* Espaçamento interno dos botões */
+    cursor: pointer; /* Muda o cursor ao passar o mouse sobre o botão */
+    z-index: 10; /* Garante que os botões fiquem sobre os itens */
+    font-size: 2em; /* Tamanho da fonte */
+}
+
+/* Estilo do botão anterior */
+.prev-btn {
+    left: 10px; /* Posiciona o botão à esquerda */
+}
+
+/* Estilo do botão seguinte */
+.next-btn {
+    right: 10px; /* Posiciona o botão à direita */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 15px; /* Reduz o padding nas telas menores */
+    }
+}
+/* Estilo para a seção de contato */
+.contato {
+    display: flex;
+    justify-content: space-evenly; /* Distribui os itens igualmente ao longo da linha */
+    gap: 50px; /* Espaçamento entre os ícones */
+    flex-wrap: wrap; /* Permite que os ícones quebrem para uma nova linha se necessário */
+    margin-top: 30px;
+}
+
+/* Itens de contato */
+.contato-item {
+    display: flex;
+    flex-direction: column; /* Coloca o ícone e o texto em coluna */
+    align-items: center; /* Alinha os itens no centro */
+    text-align: center;
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    width: 100%; /* Garante que os itens ocupem o mesmo tamanho */
+    max-width: 200px; /* Limita a largura máxima de cada item */
+}
+
+/* Ícones de contato */
+.contato-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Texto abaixo dos ícones */
+.contato-item p {
+    font-size: 1.1em;
+    margin: 0;
+    color: #fff;
+}
+
+/* Links de contato */
+.contato-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.contato-link:hover {
+    color: #00B4D8; /* Cor do hover */
+}
